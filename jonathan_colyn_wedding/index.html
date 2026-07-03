@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+    JONATHAN & COLYN WEDDING WEBSITE
+    File: index.html
+    Purpose: Website content and page sections only.
+  ========================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan Ian & Colyn Claire | Wedding Invitation</title>
+  <meta name="description" content="Wedding invitation and RSVP for Jonathan Ian and Colyn Claire — August 21, 2026 at Villa D'este Tagaytay Events Place." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <!-- =========================================================
+    01. FOLDED BROCHURE GATE
+  ========================================================== -->
+<!-- 3D FLIP WEDDING CARD GATE -->
+<div class="gate flip-card-gate" id="gate">
+  <button class="flip-card-stage" id="openInviteBtn" type="button" aria-label="Open wedding invitation">
+
+    <div class="flip-card-scene">
+      <div class="flip-book">
+
+        <!-- RIGHT INSIDE PAGE -->
+        <div class="flip-inside-page">
+          <p class="inside-eyebrow"></p>
+          <h1>August 21, 2026</h1>
+          <p class="inside-date"></p>
+          <p class="inside-note"></p>
+        </div>
+
+        <!-- FRONT COVER THAT FLIPS OPEN -->
+        <div class="flip-cover">
+          <div class="flip-cover-face flip-cover-front">
+            <p class="cover-eyebrow">Wedding Invitation</p>
+            <h1>J <span>&</span> C</h1>
+            <p class="cover-date">08 • 21 • 2026</p>
+          </div>
+
+          <div class="flip-cover-face flip-cover-back">
+            <p class="cover-eyebrow"></p>
+            <h2>By God’s grace, we joyfully invite you to witness our covenant of marriage.</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="flip-hint">Tap to open invitation</p>
+  </button>
+</div>
+
+  <!-- =========================================================
+    02. HEADER / NAVIGATION
+  ========================================================== -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#home">J &amp; C</a>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#venue">Venue</a>
+      <a href="#dress-code">Dress Code</a>
+      <a href="#entourage">Entourage</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =======================================================
+      03. HERO / COVER
+    ======================================================== -->
+    <section class="hero section" id="home">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/images/hero-bg.jpg" alt="" />
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">
+          By God's grace, we joyfully invite you<br>
+          to witness and celebrate<br>
+          the covenant of marriage between
+        </p>
+
+        <h1>Jonathan <span>&amp;</span> Colyn</h1>
+
+        <p class="verse">
+          “For the mountains shall depart,<br>
+          and the hills be removed;<br>
+          but my kindness shall not depart from thee,<br>
+          neither shall the covenant of my peace be removed,<br>
+          saith the Lord that hath mercy on thee.”<br>
+          <span>Isaiah 54:10</span>
+        </p>
+        
+      </div>
+    </section>
+
+    <!-- =======================================================
+      04. WELCOME
+    ======================================================== -->
+    <section class="section welcome" id="welcome">
+      <div class="container narrow reveal">
+        <p class="eyebrow"></p>
+        <h2>By God's grace,<br>we're getting married.</h2>
+        <p>
+          God has been faithful throughout our journey, and we're grateful to share this special day with the people who have loved us, prayed for us, and walked alongside us. Thank you for celebrating this beautiful new chapter with us.
+        </p><br>
+
+        <p class="date">August 21, 2026</p>
+      </div> <br>
+
+      <div class="countdown" id="countdown" aria-label="Countdown to wedding day">
+          <div><strong id="days">00</strong><span>Days</span></div>
+          <div><strong id="hours">00</strong><span>Hours</span></div>
+          <div><strong id="minutes">00</strong><span>Minutes</span></div>
+          <div><strong id="seconds">00</strong><span>Seconds</span></div>
+        </div>
+
+    </section>
+
+    <!-- =======================================================
+      05. TIMELINE
+    ======================================================== -->
+    <section class="section timeline" id="timeline">
+      <div class="container narrow">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Schedule</p>
+          <h2>Wedding Timeline</h2>
+        </div>
+
+        <div class="timeline-list">
+          <div class="timeline-item reveal"><time>3:00 PM</time><span></span><p>Wedding Ceremony</p></div>
+          <div class="timeline-item reveal"><time>5:00 PM</time><span></span><p>Family, Entourage & Couple Portraits</p></div>
+          <div class="timeline-item reveal"><time>5:30 PM</time><span></span><p>Reception Opens</p></div>
+          <div class="timeline-item reveal"><time>6:00 PM</time><span></span><p>Dinner, Worship & Celebration</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      06. VENUE
+    ======================================================== -->
+    <section class="section venue" id="venue">
+      <div class="container venue-grid">
+        <div class="venue-photo reveal">
+          <div class="venue-slider" aria-label="Swipeable venue photos">
+            <img src="assets/images/venue-1.jpg" alt="Villa D'este Tagaytay Events Place garden view">
+            <img src="assets/images/venue-2.png" alt="Villa D'este Tagaytay Events Place venue view">
+            <img src="assets/images/venue-3.jpg" alt="Villa D'este Tagaytay Events Place wedding area">
+            <img src="assets/images/venue-main.webp" alt="Villa D'este Tagaytay Events Place bridge and lake view">
+          </div>
+          <p class="swipe-note">Swipe to view more venue photos</p>
+        </div>
+
+        <div class="venue-copy reveal">
+          <p class="eyebrow">The Venue</p>
+          <h2>Bellagio Pavillion, Villa D’este Tagaytay Events Place</h2>
+          <p>9027-D Magallanes Drive, Maitim 2nd West, Tagaytay City, Cavite, Philippines</p>
+
+          <ul class="check-list">
+            <li>Wide parking area inside the venue</li>
+            <li>Tagaytay weather reminder: bring a light shawl or compact umbrella</li>
+          </ul>
+
+          <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Villa%20D%E2%80%99este%20Tagaytay%20Events%20Place%209027-D%20Magallanes%20Drive%20Maitim%202nd%20West%20Tagaytay%20City%20Cavite" target="_blank" rel="noopener">
+            Open Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="container map-wrap reveal">
+        <iframe title="Map to Villa D'este Tagaytay Events Place" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Villa%20D%E2%80%99este%20Tagaytay%20Events%20Place%209027-D%20Magallanes%20Drive%20Maitim%202nd%20West%20Tagaytay%20City%20Cavite&output=embed"></iframe>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      07. DRESS CODE
+    ======================================================== -->
+    <section class="section dress-code" id="dress-code">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"></p>
+          <h2>Dress to Celebrate<br>With Us</h2>
+          <p>
+            We'd love to celebrate this special day surrounded by soft, joyful colors as we celebrate the covenant God has written for us. We kindly invite you to dress in elegant semi-formal attire.
+          </p>
+        </div>
+
+        <div class="dress-grid">
+          <article class="dress-card reveal">
+            <h3>Ceremony Sponsors</h3>
+            <p><strong>Ladies:</strong> Long formal gown in any shade from our pastel palette.</p>
+            <p><strong>Gentlemen:</strong> Black, charcoal, or dark gray suit with a white long-sleeved polo.</p>
+
+            <div class="dress-image-grid">
+            <div class="dress-image-card">
+              <img src="assets/images/attire-sponsor-ladies.jpg" alt="Sponsor ladies dress inspiration" class="full-view-img" data-title="Sponsor Ladies">
+              <p>Sponsor Ladies</p>
+            </div>
+
+            <div class="dress-image-card">
+              <img src="assets/images/attire-sponsor-men.jpg" alt="Sponsor gentlemen attire inspiration" class="full-view-img" data-title="Sponsor Gentlemen">
+              <p>Sponsor Gentlemen</p>
+            </div>
+          </div>
+          </article>
+
+          <article class="dress-card reveal">
+            <h3>Guests</h3>
+            <p><strong>Ladies:</strong> Cocktail dress, midi dress, maxi dress, or elegant coordinates. Textures are encouraged.</p>
+            <p><strong>Gentlemen:</strong> Long-sleeved polo with slacks. Blazer is optional. Black, charcoal, navy, and gray suits or blazers are welcome.</p>
+
+            <div class="dress-image-grid">
+              <div class="dress-image-card">
+                <img src="assets/images/2.jpg" alt="Guest ladies dress inspiration" class="full-view-img" data-title="Guest Ladies">
+                <p>Guest Ladies</p>
+              </div>
+
+            <div class="dress-image-card">
+              <img src="assets/images/1.jpg" alt="Guest gentlemen attire inspiration" class="full-view-img" data-title="Guest Gentlemen">
+              <p>Guest Gentlemen</p>
+            </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="dress-image-section reveal">
+          <h3>Attire Inspiration</h3>
+          <p class="dress-image-note">To create a timeless and harmonious atmosphere, we would appreciate your help in following our dress guide.</p>
+          <p class="tap-note">Press an image for full view</p>
+            
+        </div>
+
+        <div class="palette reveal" aria-label="Wedding color palette">
+          <div class="swatch powder"><span>Powder Blue</span></div>
+          <div class="swatch blush"><span>Blush Pink</span></div>
+          <div class="swatch butter"><span>Butter Yellow</span></div>
+          <div class="swatch sage"><span>Sage Green</span></div>
+          <div class="swatch peach"><span>Peach</span></div>
+          <div class="swatch lavender"><span>Lavender</span></div>
+        </div>
+
+        <div class="avoid-box reveal">
+          <h3>Please Avoid</h3>
+          <p>White or ivory, bright or neon colors, dark bold colors such as black, red, emerald green, and royal blue, heavy prints, and sequins.</p><br>
+          <h3>Weather Reminder</h3>
+          <p>August is part of the rainy season in Tagaytay. While we are praying for beautiful weather,
+            we recommend bringing a light shawl or cardigan for the cool evening and a compact umbrella for your comfort when traveling to and from the venue.</p><br>
+          <h3>Footwear</h3>
+          <p>Portions of the venue include garden pathways and outdoor areas. We recommend wearing comfortable shoes or bringing an extra pair of flats if you'll be in heels.</p>  
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      08. ENTOURAGE
+    ======================================================== -->
+    <section class="section entourage" id="entourage">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"></p>
+          <h2>The Entourage</h2>
+        </div>
+
+        <div class="entourage-list reveal">
+          <div class="entourage-group">
+            <h3>Parents of the Groom</h3>
+            <p>Edgardo Benedicto</p>
+            <p>Miriam Benedicto</p>
+          </div>
+
+          <div class="entourage-group">
+            <h3>Parents of the Bride</h3>
+            <p>Franco Barboza ✝️</p>
+            <p>Evelyn Barboza</p>
+          </div>
+
+          <div class="entourage-group full">
+            <h3>Principal Sponsors</h3>
+            <p>Mr. Wilson Malana &amp; Mrs. Jahnnylyn Malana</p>
+            <p>Mr. Jebey Varona</p>
+            <p>Mrs. Krizzia Yuzon-Cayabyab</p>
+            <p>Mr. Fernando Aldover Carreon</p>
+            <p>Ms. Amor Saflor</p>
+          </div>
+
+          <div class="entourage-group">
+            <h3>Candle Sponsors</h3>
+            <p>Mr. &amp; Mrs. Isaac Benedicto &amp; Lyra Benedicto</p>
+          </div>
+
+          <div class="entourage-group">
+            <h3>Veil Sponsors</h3>
+            <p>Mr. Marc Marion Nervaez</p>
+            <p>Ms. Maureen Grace Robles</p>
+          </div>
+
+          <div class="entourage-group">
+            <h3>Cord Sponsors</h3>
+            <p>Mr. John Renzel Alicum</p>
+            <p>Ms. Erika Rose Duton</p>
+          </div>
+
+          <div class="entourage-group">
+            <h3>Maid of Honor</h3>
+            <p>Mrs. Jerrie Mae Hyvi R. Barboza</p>
+          </div>
+
+          <div class="entourage-group">
+            <h3>Bible Bearer</h3>
+            <p>Ms. Agape Apple Saflor</p>
+          </div>
+
+          <div class="entourage-group">
+            <h3>Ring Bearer</h3>
+            <p>Keith Danielle Garcia</p>
+          </div>
+
+          <div class="entourage-group ring-bearer">
+            <h3>Our Witnesses &amp; Prayer Partners</h3>
+            <p>Marriage is not meant to be walked alone. God has graciously surrounded us with family and friends who have encouraged us, prayed for us, and pointed us closer to Christ.</p>
+            <p>Whether you are standing with us during the ceremony or joining us from your seat, each one of you is a witness to this covenant and a valued prayer partner in our marriage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      09. OUR STORY
+    ======================================================== -->
+    <section class="section story" id="story">
+      <div class="container narrow">
+        <div class="section-heading reveal">
+          <h2>Our Story in Three Chapters</h2><br>
+          <p class="eyebrow">Marriage is not meant to be walked alone.<br>
+            God has graciously surrounded us with family and friends who have encouraged us, prayed for us, and pointed us closer to Christ.<br>
+            Whether you are standing with us during the ceremony<br>or joining us from your seat, each one of you is a witness to<br>
+            this covenant and a valued prayer partner in our marriage.<br>
+            Thank you for celebrating this day and for continuing to walk with us in the years ahead.</p>
+        </div>
+
+        <div class="story-card reveal">
+          <h3>His Story</h3>
+          <p>How God Prepared Ian</p>
+          <p>Before we met, God was teaching me to trust His timing instead of my own.
+            I prayed that if He would bless me with a relationship, my first girlfriend would also be my last.
+            That prayer became a covenant between God and me, so whenever there was an opportunity to pursue someone,
+            He gave me the conviction to wait.</p>
+            <p>When I met Colyn, I admired her deeply.
+              There were seasons when pursuing her became difficult, and I wanted to stop.
+              God reminded me that my role was not simply to win her heart, but to faithfully reflect His love.
+              Looking back, I see that He wasn't delaying His promise;
+              He was preparing my heart to become the husband He was calling me to be.</p>
+        </div>
+
+        <div class="story-card reveal">
+          <h3>Her Story</h3>
+          <p>How God Pursued Colyn</p>
+          <p>We met in 2020 as coworkers. In 2021, Ian asked me, "What do you want in a relationship?"
+            I answered that I wanted my next boyfriend to be my last and someone who would lead me closer to God.
+            Ironically, my life wasn't aligned with that desire.
+            I was searching for love in the wrong places and believed I was too far from God.</p>
+          <p>Instead of judging me, Ian became a faithful friend who listened, prayed, and pointed me to Christ.
+            In February 2022, I surrendered my life to Jesus and realized something that changed everything: before Ian was pursuing me,
+            Jesus had already been pursuing my heart. What I once thought was a delay was actually God's perfect timing.</p>
+        </div>
+
+        <div class="story-card reveal">
+          <h3>God's Story</h3>
+          <p>How God Wrote Our Story</p>
+          <p>God didn't bring us together when we expected. He brought us together when He knew we were ready.</p>
+          <p>During our personal daily devotions, God spoke to each of us separately. 
+            Ian received the conviction to pursue me again, while I received the conviction to say yes. 
+            Neither of us planned it, yet God was leading us in the same direction.</p>
+          <p>Years before we became a couple, Ian gave me a ring that I tucked away and forgot. When I found it again, I noticed the engraving:</p>
+          <p>"God's Timing."</p>
+          <p>Looking back, we realized those words described more than a ring—they described our story.</p>
+          <p>Our relationship wasn't founded on perfect timing alone; it was founded on obedience.
+            We simply chose to follow where God was leading, and in His perfect time, He brought our stories together.</p>
+          <p>"He has made everything beautiful in its time." - Ecclesiastes 3:11</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      10. GIFT GUIDE
+    ======================================================== -->
+    <section class="section gift" id="gift-guide">
+      <div class="container narrow reveal">
+        <p class="eyebrow">Gift Guide</p>
+        <h2>Your prayers for our marriage are the greatest gift we could ever receive.</h2>
+        <p>If you feel led to bless us further as we begin this new season, a love gift or monetary gift would be sincerely appreciated.</p>
+
+        <div class="gift-payment-box">
+          <div class="gift-qr-card">
+            <h3>Bank Account QR</h3>
+            <p>You may scan the QR code below for your love gift.</p>
+
+            <div class="qr-frame">
+              <img src="assets/images/bank-qr-placeholder.svg" alt="Bank account QR code for love gift">
+            </div>
+          </div>
+
+          <div class="gift-gcash-card">
+            <h3>GCash Number</h3>
+            <p>You may also send your love gift through GCash.</p>
+
+            <div class="copy-field">
+              <span id="gcashNumber">09XXXXXXXXX</span>
+              <button class="copy-small-btn" id="copyGcash" type="button">Copy</button>
+            </div>
+
+            <p class="copy-helper" id="gcashCopyStatus">Tap copy to copy the GCash number.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      11. RSVP FORM
+    ======================================================== -->
+    <section class="section rsvp" id="rsvp">
+      <div class="container rsvp-grid">
+        <div class="rsvp-copy reveal">
+          <p class="eyebrow">RSVP</p>
+          <h2>Kindly let us know if you can celebrate with us.</h2>
+          <p>We have lovingly reserved 1 seat in your honor.</p>
+          <p class="rsvp-small-note">
+            Kindly confirm the name of the guest who will be attending. As we are hosting an intimate celebration, we respectfully ask that attendance be limited to the seat reserved for your invitation.
+          </p>
+        </div>
+
+        <form class="rsvp-form reveal" id="rsvpForm">
+          <div class="form-row">
+            <label for="fullName">Full Name *</label>
+            <input id="fullName" name="fullName" type="text" required placeholder="Your full name" autocomplete="name" />
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="mobileNumber">Mobile Number *</label>
+              <input id="mobileNumber" name="mobileNumber" type="tel" required placeholder="09XXXXXXXXX" autocomplete="tel" inputmode="tel" />
+            </div>
+
+            <div>
+              <label for="email">Email Address <span>(optional)</span></label>
+              <input id="email" name="email" type="email" placeholder="name@email.com" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label>Will you be joining us? *</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="attendance" value="Joyfully Accepts" required>
+                <span>Joyfully Accepts</span>
+              </label>
+
+              <label class="radio-option">
+                <input type="radio" name="attendance" value="Regretfully Declines" required>
+                <span>Regretfully Declines</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row" id="mealPreferenceRow">
+            <label>Meal Preference <span>(optional)</span></label>
+            <div class="radio-group meal-options">
+              <label class="radio-option">
+                <input type="radio" name="mealPreference" value="Chicken">
+                <span>Chicken</span>
+              </label>
+
+              <label class="radio-option">
+                <input type="radio" name="mealPreference" value="Beef">
+                <span>Beef</span>
+              </label>
+
+              <label class="radio-option">
+                <input type="radio" name="mealPreference" value="Fish">
+                <span>Fish</span>
+              </label>
+
+              <label class="radio-option">
+                <input type="radio" name="mealPreference" value="Vegetarian">
+                <span>Vegetarian</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message for the Couple</label>
+            <textarea id="message" name="message" rows="4" placeholder="Share your prayers, blessings, or a message for us as we begin this new chapter together."></textarea>
+          </div>
+
+          <input type="hidden" name="reservedSeats" value="1" />
+          <input type="hidden" name="submittedAt" id="submittedAt" />
+
+          <button class="btn primary full" type="submit" id="submitBtn">Submit RSVP</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      12. FAQ
+    ======================================================== -->
+    <section class="section faq" id="faq">
+      <div class="container narrow">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Questions</p>
+          <h2>FAQ</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <button class="faq-item" type="button"><span>What time should I arrive?</span><strong>+</strong></button>
+          <div class="faq-answer">We recommend arriving at least 30 minutes before the 3:00 PM ceremony.</div>
+
+          <button class="faq-item" type="button"><span>Is parking available?</span><strong>+</strong></button>
+          <div class="faq-answer">Yes. There is a wide parking area inside the Villa D’este. Upon arrival, the venue staff will assist you to the Bellagio Pavillion.</div>
+
+          <button class="faq-item" type="button"><span>Can I bring a plus one?</span><strong>+</strong></button>
+          <div class="faq-answer">As we are hosting an intimate celebration, we respectfully ask that attendance be limited to the number of seats reserved for your invitation.</div>
+
+          <button class="faq-item" type="button"><span>When is the RSVP deadline?</span><strong>+</strong></button>
+          <div class="faq-answer">Please RSVP by July 15, 2026 so your seat can be prioritized.</div>
+
+          <button class="faq-item" type="button"><span>Is there a dress code?</span><strong>+</strong></button>
+          <div class="faq-answer">Kindly refer to the Dress Code section above for our color palette and attire guide.</div>
+
+          <button class="faq-item" type="button"><span>Will the ceremony be indoors?</span><strong>+</strong></button>
+          <div class="faq-answer">Yes, both ceremony and reception would be indoors.</div>
+
+          <button class="faq-item" type="button"><span>Who should I contact if I have questions?</span><strong>+</strong></button>
+          <div class="faq-answer"> Contact us directly at Colyn’s messenger. <a href="https://www.facebook.com/colynbarboza"> Click me to a send message!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+      13. PRAYER
+    ======================================================== -->
+    <section class="section prayer" id="contact">
+      <div class="container narrow reveal">
+        <p class="eyebrow">Pray With Us</p>
+        <p>More than celebrating our marriage, our greatest desire is that everyone who gathers with us would experience the love and faithfulness of Jesus Christ.</p>
+        
+        <div class="prayer-list">
+          <span>Our marriage</span>
+          <span>Our future family</span>
+          <span>Wisdom</span>
+          <span>Our ministry together</span>
+          <span>Everyone attending</span>
+        </div><br>
+
+        <h2>Our Prayer</h2>
+        <p>Our greatest prayer is that, beyond celebrating our marriage, 
+          everyone who joins us would encounter the love and faithfulness of Jesus Christ. 
+          Thank you for witnessing the covenant God is establishing in our lives.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+    14. FOOTER / FLOATING ACTIONS / MUSIC / LIGHTBOX
+  ========================================================== -->
+  <a class="floating-rsvp" href="#rsvp">Submit RSVP Now!</a>
+
+  <footer class="footer">
+    <p>Jonathan Ian &amp; Colyn Claire</p>
+    <p>August 21, 2026 • Villa D’este Tagaytay Events Place</p>
+    <button class="copy-btn" id="copyHashtag" type="button">Copy #IanNaAngGodsColyn</button>
+  </footer>
+
+  <div class="music-image-box" id="musicImageBox">
+    <audio id="bgMusic" loop preload="auto">
+      <source src="assets/audio/jesus-at-the-center.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-image-btn" id="musicImageBtn" type="button" aria-label="Play or pause wedding music">
+      <img src="assets/images/music-cover.png" alt="Wedding music cover">
+      <span class="music-status-icon" id="musicStatusIcon">▶</span>
+    </button>
+  </div>
+
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image">×</button>
+    <img id="lightboxImage" src="assets/images/cover-placeholder.svg" alt="">
+    <p id="lightboxTitle"></p>
+  </div>
+</body>
+</html>
