@@ -1331,10 +1331,11 @@ textarea {
 .dress-card .dress-image-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 18px;
-  margin-top: 24px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  margin-top: 28px;
+  width: 100%;
 }
 
 /* IMAGE CARD */
@@ -1632,6 +1633,27 @@ textarea {
 
 .story-card h3 {
   font-size: 1.45rem;
+}
+
+.story-card .story-subtitle {
+  margin-bottom: 28px;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.story-card strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.story-card .story-quote {
+  font-weight: 800;
+}
+
+.story-card .verse {
+  margin-top: 28px;
+  color: var(--ink);
+  font-style: italic;
 }
 
 /* =========================================================
