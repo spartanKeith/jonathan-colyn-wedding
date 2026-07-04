@@ -706,7 +706,7 @@ textarea {
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(820px, 100%);
+  width: min(860px, 100%);
   margin: 0 auto;
   transform: translateY(-10px);
 }
@@ -764,7 +764,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 18px auto 24px;
+  margin: 18px auto 26px;
   padding: 10px 26px;
   border: 1px solid rgba(178, 138, 92, 0.28);
   border-radius: 999px;
@@ -781,10 +781,11 @@ textarea {
 /* ELEGANT COUNTDOWN */
 .countdown {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  width: min(640px, 100%);
-  margin: 0 auto 32px;
+  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  justify-content: center;
+  gap: 22px;
+  width: min(800px, 100%);
+  margin: 0 auto 34px;
 }
 
 .countdown div {
@@ -792,18 +793,19 @@ textarea {
   --ring-color: var(--gold);
 
   position: relative;
-  min-height: 138px;
-  padding: 18px 10px 14px;
+  min-height: 190px;
+  padding: 28px 16px 22px;
   border: 1px solid rgba(178, 138, 92, 0.2);
-  border-radius: 28px;
+  border-radius: 30px;
   background:
     linear-gradient(
       180deg,
-      rgba(255, 253, 248, 0.92),
-      rgba(255, 250, 243, 0.78)
+      rgba(255, 253, 248, 0.94),
+      rgba(255, 250, 243, 0.82)
     );
   box-shadow: 0 18px 42px rgba(67, 46, 30, 0.12);
   backdrop-filter: blur(12px);
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -831,8 +833,9 @@ textarea {
 /* Outer ring */
 .countdown div::before {
   content: "";
-  width: 82px;
-  height: 82px;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 18px;
   border-radius: 50%;
   background:
     conic-gradient(
@@ -840,7 +843,7 @@ textarea {
       rgba(178, 138, 92, 0.14) 0deg
     );
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.55),
+    inset 0 0 0 10px rgba(255, 253, 248, 0.95),
     0 8px 24px rgba(67, 46, 30, 0.08);
 }
 
@@ -848,24 +851,29 @@ textarea {
 .countdown div::after {
   content: "";
   position: absolute;
-  top: 23px;
+  top: 38px;
+  left: 50%;
+  z-index: 1;
   width: 66px;
   height: 66px;
   border-radius: 50%;
   background:
     radial-gradient(circle, #fffdf8 0%, #fff7ec 100%);
   box-shadow: inset 0 0 0 1px rgba(178, 138, 92, 0.12);
+  transform: translateX(-50%);
 }
 
 /* Number */
 .countdown strong {
   position: absolute;
-  top: 47px;
+  top: 61px;
+  left: 0;
+  right: 0;
   z-index: 2;
   display: block;
   color: var(--ink);
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.85rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1;
   text-align: center;
@@ -873,12 +881,14 @@ textarea {
 
 /* Label */
 .countdown span {
+  position: relative;
+  z-index: 2;
   display: block;
-  margin-top: 14px;
+  margin-top: 0;
   color: var(--gold-dark);
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
   text-align: center;
   text-transform: uppercase;
 }
@@ -887,9 +897,9 @@ textarea {
 .countdown div span::before {
   content: "";
   display: block;
-  width: 26px;
+  width: 28px;
   height: 1px;
-  margin: 0 auto 8px;
+  margin: 0 auto 12px;
   background: rgba(178, 138, 92, 0.38);
 }
 
@@ -917,6 +927,9 @@ textarea {
   }
 
   .hero-content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
     transform: translateY(-6px);
   }
 
@@ -944,50 +957,56 @@ textarea {
   }
 
   .date {
-    margin: 14px auto 20px;
+    display: inline-flex;
+    margin: 14px auto 22px;
     padding: 9px 18px;
     font-size: 0.62rem;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
   }
 
   .countdown {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
     width: 100%;
-    margin-bottom: 26px;
+    max-width: 340px;
+    margin: 0 auto 34px;
   }
 
   .countdown div {
-    min-height: 108px;
-    padding: 12px 4px 10px;
-    border-radius: 20px;
+    width: 100%;
+    min-height: 150px;
+    padding: 22px 12px 18px;
+    border-radius: 24px;
   }
 
   .countdown div::before {
-    width: 58px;
-    height: 58px;
+    width: 78px;
+    height: 78px;
+    margin-bottom: 16px;
+    box-shadow:
+      inset 0 0 0 8px rgba(255, 253, 248, 0.95),
+      0 8px 22px rgba(67, 46, 30, 0.08);
   }
 
   .countdown div::after {
-    top: 17px;
-    width: 46px;
-    height: 46px;
+    top: 31px;
+    width: 54px;
+    height: 54px;
   }
 
   .countdown strong {
-    top: 34px;
-    font-size: 1.25rem;
+    top: 50px;
+    font-size: 1.65rem;
   }
 
   .countdown span {
-    margin-top: 10px;
-    font-size: 0.45rem;
-    letter-spacing: 0.08em;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
   }
 
   .countdown div span::before {
-    width: 18px;
-    margin-bottom: 6px;
+    width: 24px;
+    margin-bottom: 10px;
   }
 
   .hero-actions .btn {
@@ -997,121 +1016,39 @@ textarea {
   }
 }
 
-/* =========================================================
-   MOBILE COUNTDOWN FIX - CENTERED VERSION
-========================================================= */
-@media (max-width: 640px) {
-  .hero-content {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .date {
-    display: inline-flex;
-    margin: 14px auto 18px;
-    padding: 8px 16px;
-    font-size: 0.58rem;
-    letter-spacing: 0.16em;
-  }
-
+/* SMALL MOBILE */
+@media (max-width: 380px) {
   .countdown {
-    display: grid;
-    grid-template-columns: repeat(4, 72px);
-    justify-content: center;
-    justify-items: center;
-    align-items: start;
-    gap: 8px;
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto 26px;
+    max-width: 310px;
+    gap: 12px;
   }
 
   .countdown div {
-    position: relative;
-    width: 72px;
-    height: 108px;
-    min-height: unset;
-    margin: 0;
-    padding: 0;
-    border-radius: 18px;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255, 253, 248, 0.94),
-        rgba(255, 250, 243, 0.82)
-      );
-    box-shadow: 0 10px 24px rgba(67, 46, 30, 0.1);
-    overflow: hidden;
+    min-height: 140px;
+    padding: 20px 10px 16px;
+    border-radius: 22px;
   }
 
   .countdown div::before {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    background:
-      conic-gradient(
-        var(--ring-color) var(--progress),
-        rgba(178, 138, 92, 0.14) 0deg
-      );
-    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    margin-bottom: 14px;
   }
 
   .countdown div::after {
-    content: "";
-    position: absolute;
-    top: 18px;
-    left: 50%;
-    z-index: 1;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #fffdf8 0%, #fff7ec 100%);
-    transform: translateX(-50%);
+    top: 29px;
+    width: 50px;
+    height: 50px;
   }
 
   .countdown strong {
-    position: absolute;
-    top: 31px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    color: var(--ink);
-    font-family: Inter, system-ui, sans-serif;
-    font-size: 0.92rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
+    top: 47px;
+    font-size: 1.45rem;
   }
 
   .countdown span {
-    position: absolute;
-    top: 76px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    display: block;
-    margin: 0;
-    color: var(--gold-dark);
-    font-size: 0.43rem;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    line-height: 1;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .countdown div span::before {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 1px;
-    margin: 0 auto 6px;
-    background: rgba(178, 138, 92, 0.35);
+    font-size: 0.54rem;
+    letter-spacing: 0.14em;
   }
 }
 
@@ -2603,5 +2540,220 @@ textarea {
 
   .flip-cover h1 {
     font-size: clamp(2.4rem, 12vw, 3.3rem);
+  }
+}
+
+/* =========================================================
+   FINAL COUNTDOWN ALIGNMENT FIX
+   Paste this at the VERY BOTTOM of your CSS
+========================================================= */
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  justify-content: center;
+  gap: 22px;
+  width: min(800px, 100%);
+  margin: 0 auto 34px;
+}
+
+.countdown div {
+  --progress: 0deg;
+  --ring-color: var(--gold);
+
+  position: relative;
+  width: 100%;
+  height: 190px;
+  min-height: 190px;
+  padding: 0;
+  border: 1px solid rgba(178, 138, 92, 0.2);
+  border-radius: 30px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 253, 248, 0.94),
+      rgba(255, 250, 243, 0.82)
+    );
+  box-shadow: 0 18px 42px rgba(67, 46, 30, 0.12);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+/* ring */
+.countdown div::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      var(--ring-color) var(--progress),
+      rgba(178, 138, 92, 0.14) 0deg
+    );
+  box-shadow:
+    inset 0 0 0 10px rgba(255, 253, 248, 0.95),
+    0 8px 24px rgba(67, 46, 30, 0.08);
+  transform: translateX(-50%);
+}
+
+/* inner circle */
+.countdown div::after {
+  content: "";
+  position: absolute;
+  top: 43px;
+  left: 50%;
+  z-index: 1;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fffdf8 0%, #fff7ec 100%);
+  box-shadow: inset 0 0 0 1px rgba(178, 138, 92, 0.12);
+  transform: translateX(-50%);
+}
+
+/* number */
+.countdown strong {
+  position: absolute;
+  top: 63px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+/* label */
+.countdown span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  z-index: 2;
+  display: block;
+  margin: 0;
+  color: var(--gold-dark);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.countdown div span::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  margin: 0 auto 12px;
+  background: rgba(178, 138, 92, 0.38);
+}
+
+/* colors */
+.countdown div:nth-child(1) {
+  --ring-color: var(--powder);
+}
+
+.countdown div:nth-child(2) {
+  --ring-color: var(--blush);
+}
+
+.countdown div:nth-child(3) {
+  --ring-color: var(--butter);
+}
+
+.countdown div:nth-child(4) {
+  --ring-color: var(--sage);
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .countdown {
+    grid-template-columns: repeat(4, 72px);
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto 28px;
+  }
+
+  .countdown div {
+    width: 72px;
+    height: 108px;
+    min-height: 108px;
+    border-radius: 18px;
+  }
+
+  .countdown div::before {
+    top: 12px;
+    width: 54px;
+    height: 54px;
+    box-shadow:
+      inset 0 0 0 6px rgba(255, 253, 248, 0.95),
+      0 6px 18px rgba(67, 46, 30, 0.08);
+  }
+
+  .countdown div::after {
+    top: 19px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .countdown strong {
+    top: 31px;
+    font-size: 1rem;
+  }
+
+  .countdown span {
+    bottom: 16px;
+    font-size: 0.43rem;
+    letter-spacing: 0.08em;
+  }
+
+  .countdown div span::before {
+    width: 16px;
+    margin-bottom: 6px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+  .countdown {
+    grid-template-columns: repeat(4, 66px);
+    max-width: 300px;
+    gap: 6px;
+  }
+
+  .countdown div {
+    width: 66px;
+    height: 104px;
+    min-height: 104px;
+  }
+
+  .countdown div::before {
+    width: 50px;
+    height: 50px;
+  }
+
+  .countdown div::after {
+    width: 38px;
+    height: 38px;
+  }
+
+  .countdown strong {
+    top: 30px;
+    font-size: 0.95rem;
+  }
+
+  .countdown span {
+    font-size: 0.4rem;
   }
 }
