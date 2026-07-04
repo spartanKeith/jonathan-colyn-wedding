@@ -413,16 +413,21 @@ textarea {
   font-style: italic;
 }
 
-/* LEFT PAGE TEXT FONT - MODERN BOLD */
-.flip-cover-back h1 {
+/* LEFT PAGE TEXT FONT - SAME AS RIGHT PAGE */
+.flip-cover-back h2 {
   margin: 0;
-  max-width: 220px;
+  max-width: 300px;
   color: var(--ink);
-  font-family: Inter, system-ui, sans-serif;
-  font-size: clamp(1.7rem, 3.4vw, 2.8rem);
-  font-weight: 800;
-  line-height: 1.15;
-  text-align: left;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.1rem, 4.6vw, 3.35rem);
+  font-weight: 500;
+  line-height: 0.98;
+  text-align: center;
+}
+
+.flip-cover-back h2 span {
+  color: var(--gold);
+  font-style: italic;
 }
 
 .cover-date {
@@ -1298,6 +1303,8 @@ textarea {
 .dress-card {
   padding: clamp(26px, 3vw, 42px);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .dress-card h3,
@@ -1334,13 +1341,13 @@ textarea {
   justify-content: center;
   align-items: stretch;
   gap: 24px;
-  margin-top: 28px;
+  margin: 30px auto 0;
   width: 100%;
 }
 
 /* IMAGE CARD */
 .dress-image-card {
-  width: 160px;
+  width: 170px;
   min-height: 330px;
   padding: 12px;
   border: 1px solid rgba(95, 74, 58, 0.14);
@@ -1478,6 +1485,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .dress-card {
+    text-align: center;
+  }
+
   .dress-card .dress-image-grid {
     justify-content: center;
   }
@@ -1491,6 +1502,10 @@ textarea {
     height: 265px;
   }
 
+  .dress-image-card p {
+    text-align: left;
+  }
+
   .palette {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1501,6 +1516,7 @@ textarea {
   .dress-card {
     padding: 24px 20px;
     border-radius: 28px;
+    text-align: left;
   }
 
   .dress-card h3 {
@@ -1515,13 +1531,16 @@ textarea {
   .dress-card .dress-image-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
     justify-content: center;
-    margin-top: 20px;
+    justify-items: center;
+    align-items: stretch;
+    gap: 14px;
+    margin-top: 22px;
   }
 
   .dress-image-card {
     width: 100%;
+    max-width: 180px;
     min-height: 285px;
     padding: 10px;
     border-radius: 20px;
@@ -1537,6 +1556,7 @@ textarea {
     font-size: 0.66rem;
     letter-spacing: 0.1em;
     line-height: 1.35;
+    text-align: left;
   }
 
   .palette {
@@ -1550,11 +1570,16 @@ textarea {
 
 /* SMALL MOBILE */
 @media (max-width: 420px) {
+  .dress-card {
+    padding: 22px 16px;
+  }
+
   .dress-card .dress-image-grid {
     gap: 12px;
   }
 
   .dress-image-card {
+    max-width: 160px;
     min-height: 260px;
   }
 
@@ -1925,20 +1950,88 @@ textarea {
   color: #f2d7b2;
 }
 
+/* PRAYER LIST - NO RECTANGLE */
 .prayer-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin-top: 24px;
+  gap: 18px 34px;
+  margin-top: 28px;
 }
 
 .prayer-list span {
-  padding: 9px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  font-size: 0.85rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #fff8ee;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* SMALL ICON BEFORE EACH PRAYER */
+.prayer-list span::before {
+  content: "✦";
+  color: #f2d7b2;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+/* SOFT UNDERLINE EFFECT */
+.prayer-list span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(242, 215, 178, 0.9),
+    transparent
+  );
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.prayer-list span:hover {
+  color: #f2d7b2;
+  transform: translateY(-2px);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.prayer-list span:hover::after {
+  width: 100%;
+}
+
+/* OPTIONAL DIFFERENT ICONS */
+.prayer-list span:nth-child(1)::before {
+  content: "♡";
+}
+
+.prayer-list span:nth-child(2)::before {
+  content: "✿";
+}
+
+.prayer-list span:nth-child(3)::before {
+  content: "✦";
+}
+
+.prayer-list span:nth-child(4)::before {
+  content: "☀";
+}
+
+.prayer-list span:nth-child(5)::before {
+  content: "❦";
 }
 
 .footer {
@@ -1977,6 +2070,21 @@ textarea {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .prayer-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 26px;
+  }
+
+  .prayer-list span {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 
 /* =========================================================
@@ -2376,5 +2484,124 @@ textarea {
 
   .gate.opening .letter-card {
     transform: translateY(-90px) scale(1);
+  }
+}
+
+/* =========================================================
+   FLIP CARD DEPLOY FIX - MOBILE / FACEBOOK BROWSER
+   Paste this at the very bottom of your CSS
+========================================================= */
+
+/* Fix 3D flip rendering on iOS / Facebook in-app browser */
+.flip-card-scene,
+.flip-book,
+.flip-cover,
+.flip-cover-face {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-cover-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Force each face to render separately */
+.flip-cover-front {
+  transform: rotateY(0deg) translateZ(1px);
+}
+
+.flip-cover-back {
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+/* Hide front cover once the card starts opening to prevent overlap */
+.gate.opening .flip-cover-front {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease 0.35s;
+}
+
+.gate:not(.opening) .flip-cover-front {
+  opacity: 1;
+}
+
+/* Make sure the opened cover stays clean */
+.gate.opening .flip-cover-back {
+  opacity: 1;
+}
+
+/* LEFT PAGE TEXT FIX */
+.flip-cover-back h2 {
+  margin: 0 auto;
+  max-width: 300px;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.05;
+  text-align: center;
+}
+
+/* RIGHT PAGE TEXT FIX */
+.flip-inside-page h1 {
+  text-align: center;
+}
+
+/* MOBILE FIX */
+@media (max-width: 700px) {
+  .flip-card-scene {
+    width: min(340px, 92vw);
+    height: 270px;
+    margin: 0 auto;
+    perspective: 1600px;
+  }
+
+  .flip-book {
+    transform: translateX(-25%);
+  }
+
+  .gate.opening .flip-book {
+    transform: translateX(0);
+  }
+
+  .flip-inside-page,
+  .flip-cover-face {
+    padding: 22px 14px;
+  }
+
+  .flip-cover-back h2 {
+    max-width: 128px;
+    margin: 0 auto;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.02rem, 4.6vw, 1.32rem);
+    font-weight: 500;
+    line-height: 1.12;
+    text-align: center;
+    color: var(--ink);
+  }
+
+  .flip-inside-page h1 {
+    max-width: 130px;
+    margin: 0 auto;
+    font-size: clamp(1.45rem, 7vw, 2.05rem);
+    line-height: 1;
+    text-align: center;
+  }
+
+  .cover-eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.48rem;
+    letter-spacing: 0.12em;
+  }
+
+  .cover-date {
+    margin-top: 12px;
+    font-size: 0.56rem;
+    letter-spacing: 0.12em;
+  }
+
+  .flip-cover h1 {
+    font-size: clamp(2.4rem, 12vw, 3.3rem);
   }
 }
